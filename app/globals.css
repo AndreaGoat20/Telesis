@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf9f6;
+  color: #12131a;
+}
+
+::selection {
+  background-color: #e8402c;
+  color: #faf9f6;
+}
+
+.prose-article p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.8;
+}
+
+.prose-article h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.prose-article a {
+  color: #e8402c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
