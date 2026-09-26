@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "articoli"
+    label: "Articoli"
+    label_singular: "Articolo"
+    folder: "content/articoli"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    media_folder: "/public/images/articoli"
+    public_folder: "/images/articoli"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Sottotitolo", name: "subtitle", widget: "string", required: false }
+      - {
+          label: "Data",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Autore", name: "author", widget: "string" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options: ["Società", "Tecnologia", "Cultura", "Attualità"]
+      - { label: "Immagine di copertina", name: "cover", widget: "image" }
+      - {
+          label: "Tempo di lettura (minuti)",
+          name: "readingTime",
+          widget: "number",
+          required: false,
+          value_type: "int",
+        }
+      - {
+          label: "Riassunto (mostrato nelle card)",
+          name: "excerpt",
+          widget: "text",
+          required: false,
+        }
+      - { label: "Corpo dell'articolo", name: "body", widget: "markdown" }
+
+  - name: "team"
+    label: "Team"
+    label_singular: "Membro del team"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    media_folder: "/public/images/team"
+    public_folder: "/images/team"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Ruolo", name: "role", widget: "string" }
+      - { label: "Foto", name: "photo", widget: "image", required: false }
+      - { label: "Bio", name: "body", widget: "text" }

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telesis Magazine · Admin</title>
+    <!-- Percorso assoluto: Next.js normalizza /admin/ in /admin (senza
+         slash finale), il che romperebbe la risoluzione relativa di
+         config.yml da parte di Decap CMS. -->
+    <link href="/admin/config.yml" rel="cms-config-url" />
+  </head>
+  <body>
+    <!-- Decap CMS: nessuna installazione necessaria, caricato via CDN ufficiale -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
+</html>
