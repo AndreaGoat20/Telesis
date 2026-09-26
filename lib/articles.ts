@@ -7,6 +7,16 @@ import type { Article } from "./types";
 
 const articlesDirectory = path.join(process.cwd(), "content/articoli");
 
+/**
+ * Se la data nel frontmatter non è tra virgolette (es. quelle scritte da
+ * Decap CMS), YAML la interpreta come un oggetto Date anziché come stringa.
+ * La normalizziamo sempre in "YYYY-MM-DD" per il resto del sito.
+ */
+function normalizeDate(value: unknown): string {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return typeof value === "string" ? value : "";
+}
+
 function readArticleFile(fileName: string): Article {
   const slug = fileName.replace(/\.md$/, "");
   const fullPath = path.join(articlesDirectory, fileName);
@@ -17,7 +27,7 @@ function readArticleFile(fileName: string): Article {
     slug,
     title: data.title ?? slug,
     subtitle: data.subtitle ?? "",
-    date: data.date ?? "",
+    date: normalizeDate(data.date),
     author: data.author ?? "Redazione",
     category: data.category ?? "Generale",
     cover: data.cover ?? "",
