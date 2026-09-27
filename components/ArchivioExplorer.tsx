@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Article } from "@/lib/types";
 import ArticleCard from "./ArticleCard";
+import Reveal from "./Reveal";
 
 const PAGE_SIZE = 6;
 
@@ -65,7 +66,7 @@ export default function ArchivioExplorer({ articles }: { articles: Article[] }) 
               resetPagination();
             }}
             placeholder="Cerca per titolo o contenuto..."
-            className="w-full rounded-full border border-ink/15 bg-paper px-5 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-accent focus:outline-none"
+            className="w-full rounded-full border border-ink/15 bg-bone px-5 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-primary focus:outline-none"
           />
         </div>
 
@@ -76,7 +77,7 @@ export default function ArchivioExplorer({ articles }: { articles: Article[] }) 
               setCategory(e.target.value);
               resetPagination();
             }}
-            className="rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-sm text-ink focus:border-accent focus:outline-none"
+            className="rounded-full border border-ink/15 bg-bone px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
           >
             {categories.map((c) => (
               <option key={c} value={c}>
@@ -91,7 +92,7 @@ export default function ArchivioExplorer({ articles }: { articles: Article[] }) 
               setYear(e.target.value);
               resetPagination();
             }}
-            className="rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-sm text-ink focus:border-accent focus:outline-none"
+            className="rounded-full border border-ink/15 bg-bone px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
           >
             {years.map((y) => (
               <option key={y} value={y}>
@@ -109,8 +110,10 @@ export default function ArchivioExplorer({ articles }: { articles: Article[] }) 
 
       {visibleArticles.length > 0 ? (
         <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {visibleArticles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
+          {visibleArticles.map((article, index) => (
+            <Reveal key={article.slug} delay={(index % PAGE_SIZE) * 0.06}>
+              <ArticleCard article={article} />
+            </Reveal>
           ))}
         </div>
       ) : (
@@ -124,7 +127,7 @@ export default function ArchivioExplorer({ articles }: { articles: Article[] }) 
           <button
             type="button"
             onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-            className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary"
           >
             Carica altri articoli
           </button>

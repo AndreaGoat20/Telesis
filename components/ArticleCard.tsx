@@ -8,7 +8,7 @@ export default function ArticleCard({ article }: { article: Article }) {
   return (
     <Link
       href={`/archivio/${article.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-shadow hover:shadow-lg hover:shadow-ink/5"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-ink/10"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink/5">
         {article.cover && (
@@ -25,7 +25,7 @@ export default function ArticleCard({ article }: { article: Article }) {
       <div className="flex flex-1 flex-col gap-3 p-5">
         <CategoryPill category={article.category} />
 
-        <h3 className="font-display text-xl font-semibold leading-snug text-ink group-hover:text-accent">
+        <h3 className="font-display text-xl font-semibold leading-snug text-ink group-hover:text-primary">
           {article.title}
         </h3>
 

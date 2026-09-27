@@ -6,6 +6,7 @@ import { getAllArticleSlugs, getAllArticles, getArticleBySlug } from "@/lib/arti
 import { formatDate } from "@/lib/format";
 import CategoryPill from "@/components/CategoryPill";
 import ArticleCard from "@/components/ArticleCard";
+import Reveal from "@/components/Reveal";
 
 export function generateStaticParams() {
   return getAllArticleSlugs().map((slug) => ({ slug }));
@@ -36,7 +37,7 @@ export default async function ArticlePage({ params }: { params: { slug: string }
   return (
     <article>
       <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6">
-        <Link href="/archivio" className="text-sm font-medium text-ink/50 hover:text-accent">
+        <Link href="/archivio" className="text-sm font-medium text-ink/50 hover:text-primary">
           ← Torna all&rsquo;archivio
         </Link>
 
@@ -80,14 +81,16 @@ export default async function ArticlePage({ params }: { params: { slug: string }
       />
 
       {related.length > 0 && (
-        <section className="border-t border-ink/10 bg-white">
+        <section className="bg-primary text-bone">
           <div className="mx-auto max-w-content px-4 py-14 sm:px-6">
-            <h2 className="font-display text-2xl font-semibold text-ink">
+            <h2 className="font-display text-2xl font-semibold">
               Continua a leggere
             </h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((a) => (
-                <ArticleCard key={a.slug} article={a} />
+              {related.map((a, index) => (
+                <Reveal key={a.slug} delay={index * 0.08}>
+                  <ArticleCard article={a} />
+                </Reveal>
               ))}
             </div>
           </div>

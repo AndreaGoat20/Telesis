@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function EventiPage() {
   return (
     <div className="mx-auto flex max-w-content flex-col items-center px-4 py-24 text-center sm:px-6">
-      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
         Eventi
       </span>
       <h1 className="mt-4 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -28,7 +28,7 @@ export default function EventiPage() {
         href="https://www.instagram.com/magazine.telesis"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-accent"
+        className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-bone transition-colors hover:bg-secondary hover:text-primary"
       >
         Seguici su Instagram
         <span aria-hidden>→</span>

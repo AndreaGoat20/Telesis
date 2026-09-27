@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Fraunces, Inter } from "next/font/google";
+import { Anton, Oswald } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const anton = Anton({
   subsets: ["latin"],
+  weight: ["400"],
   variable: "--font-display",
   display: "swap",
 });
 
-const inter = Inter({
+const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -32,10 +34,12 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${fraunces.variable} ${inter.variable} flex min-h-screen flex-col font-sans antialiased`}
+        className={`${anton.variable} ${oswald.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
 
         {/* Necessario perché i link di invito/reset di Netlify Identity,

@@ -8,13 +8,13 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-bone/10 bg-primary/95 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex flex-col leading-none">
-          <span className="font-display text-2xl font-semibold tracking-tight text-ink">
+          <span className="font-display text-2xl font-semibold tracking-tight text-bone">
             Telesis
           </span>
-          <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-ink/50">
+          <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-bone/60">
             Magazine
           </span>
         </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium uppercase tracking-wide text-ink/70 transition-colors hover:text-accent"
+              className="text-sm font-medium uppercase tracking-wide text-bone/80 transition-colors hover:text-secondary"
             >
               {link.label}
             </Link>
@@ -33,7 +33,7 @@ export default function Navbar() {
             href="https://www.instagram.com/magazine.telesis"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-accent sm:inline-block"
+            className="hidden rounded-full bg-bone px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-secondary sm:inline-block"
           >
             Instagram
           </a>

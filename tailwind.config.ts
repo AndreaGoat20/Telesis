@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#12131a",
-        paper: "#faf9f6",
-        accent: "#e8402c",
-        accent2: "#1a1a2e",
+        bone: "#F5F0E8",
+        primary: "#19476A",
+        secondary: "#5DADD1",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

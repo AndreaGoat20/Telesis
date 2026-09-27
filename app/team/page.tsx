@@ -40,7 +40,7 @@ export default function TeamPage() {
             <h2 className="mt-4 font-display text-lg font-semibold text-ink">
               {member.name}
             </h2>
-            <p className="text-sm font-medium text-accent">{member.role}</p>
+            <p className="text-sm font-medium text-primary">{member.role}</p>
             <p className="mt-2 text-sm text-ink/60">{member.bio}</p>
           </div>
         ))}
