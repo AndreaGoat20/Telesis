@@ -20,13 +20,11 @@ app/                    Pagine (App Router)
   page.tsx              Home
   archivio/page.tsx      Archivio con ricerca e filtri
   archivio/[slug]/       Pagina di dettaglio articolo
-  team/page.tsx          Pagina Team
-  eventi/page.tsx        Pagina Eventi (non collegata nel menu)
+  collaborazioni-eventi/page.tsx   Pagina Collaborazioni & Eventi (non collegata nel menu)
 components/             Componenti React condivisi (Navbar, ArticleCard, ...)
 lib/                    Funzioni per leggere e parsare i contenuti Markdown
 content/
   articoli/*.md         Articoli della rivista
-  team/*.md              Membri del team
 ```
 
 ## Come aggiungere un nuovo articolo
@@ -39,7 +37,7 @@ title: "Titolo dell'articolo"
 subtitle: "Sottotitolo o sommario breve"
 date: "2026-09-01"       # formato AAAA-MM-GG, usato anche per l'ordinamento
 author: "Nome Cognome"
-category: "Cultura"       # qualsiasi categoria: compare automaticamente nei filtri
+category: "Storia"        # Storia, Geopolitica o Economia: compare automaticamente nei filtri
 cover: "https://..."      # URL dell'immagine di copertina
 readingTime: 6             # tempo di lettura stimato, in minuti
 excerpt: "Riassunto breve mostrato nelle card"
@@ -61,20 +59,10 @@ Nella versione dimostrativa le immagini usano URL esterni di placeholder (`picsu
 - puoi continuare a usare URL esterni (aggiungi il dominio a `images.remotePatterns` in `next.config.js`), oppure
 - puoi mettere i file in `public/images/articoli/` e riferirli come `/images/articoli/nome-file.jpg` nel frontmatter `cover`.
 
-## Come aggiungere un membro del team
+## Pagina Collaborazioni & Eventi
 
-Crea un file `content/team/nome-cognome.md`:
+`/collaborazioni-eventi` esiste ma non compare nel menu di navigazione né in nessun link del sito: è raggiungibile solo digitando l'URL direttamente. Contiene per ora un placeholder ("Presto novità") — sostituiscine il contenuto in `app/collaborazioni-eventi/page.tsx` quando saranno definite le prime collaborazioni ed eventi.
 
-```markdown
----
-name: "Nome Cognome"
-role: "Ruolo in redazione"
-photo: "https://... oppure /images/team/nome.jpg"
-order: 5                 # posizione nella griglia (numero più basso = prima)
----
-Breve biografia del membro del team, in una o più frasi.
-```
+## CMS (Decap CMS)
 
-## Pagina Eventi
-
-`/eventi` esiste ma non compare nel menu di navigazione né in nessun link del sito: è raggiungibile solo digitando l'URL direttamente. Contiene per ora un placeholder ("Presto novità") — sostituiscine il contenuto in `app/eventi/page.tsx` quando saranno definiti i primi eventi.
+Il pannello di gestione contenuti è su `/admin`, non collegato in nessun menu del sito, protetto da Netlify Identity (accesso solo su invito). Da lì si possono creare, modificare ed eliminare gli articoli; la configurazione dei campi è in `public/admin/config.yml`.

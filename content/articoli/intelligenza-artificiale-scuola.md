@@ -3,7 +3,7 @@ title: "Intelligenza artificiale nelle scuole: alleata o minaccia?"
 subtitle: "ChatGPT, compiti a casa e nuove forme di apprendimento: la scuola italiana è pronta per l'IA?"
 date: "2026-08-18"
 author: "Marco Rinaldi"
-category: "Tecnologia"
+category: "Geopolitica"
 cover: "https://picsum.photos/seed/telesis-ia-scuola/1600/1000"
 readingTime: 6
 excerpt: "Tra divieti, sperimentazioni e un uso ormai diffusissimo, l'intelligenza artificiale è già dentro le nostre aule. Ma nessuno sembra avere in mano un manuale d'istruzioni."

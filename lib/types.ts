@@ -10,12 +10,3 @@ export type Article = {
   excerpt?: string;
   content: string;
 };
-
-export type TeamMember = {
-  slug: string;
-  name: string;
-  role: string;
-  photo: string;
-  order: number;
-  bio: string;
-};

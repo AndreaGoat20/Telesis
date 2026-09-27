@@ -28,11 +28,6 @@ export default function Footer() {
                   Archivio
                 </Link>
               </li>
-              <li>
-                <Link href="/team" className="text-bone/80 hover:text-secondary">
-                  Team
-                </Link>
-              </li>
             </ul>
           </div>
 

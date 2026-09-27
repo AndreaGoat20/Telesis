@@ -32,7 +32,7 @@ collections:
       - label: "Categoria"
         name: "category"
         widget: "select"
-        options: ["Società", "Tecnologia", "Cultura", "Attualità"]
+        options: ["Storia", "Geopolitica", "Economia"]
       - { label: "Immagine di copertina", name: "cover", widget: "image" }
       - {
           label: "Tempo di lettura (minuti)",
@@ -48,18 +48,3 @@ collections:
           required: false,
         }
       - { label: "Corpo dell'articolo", name: "body", widget: "markdown" }
-
-  - name: "team"
-    label: "Team"
-    label_singular: "Membro del team"
-    folder: "content/team"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "name"
-    media_folder: "/public/images/team"
-    public_folder: "/images/team"
-    fields:
-      - { label: "Nome", name: "name", widget: "string" }
-      - { label: "Ruolo", name: "role", widget: "string" }
-      - { label: "Foto", name: "photo", widget: "image", required: false }
-      - { label: "Bio", name: "body", widget: "text" }

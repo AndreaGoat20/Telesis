@@ -3,7 +3,7 @@ title: "Generazione Z e il lavoro che cambia"
 subtitle: "Tra smart working, gig economy e nuove priorità: come i più giovani stanno riscrivendo il rapporto con il lavoro"
 date: "2026-08-25"
 author: "Sofia Bianchi"
-category: "Società"
+category: "Economia"
 cover: "https://picsum.photos/seed/telesis-lavoro/1600/1000"
 readingTime: 7
 excerpt: "Non è (solo) pigrizia: la generazione Z sta ridefinendo cosa significa avere un lavoro soddisfacente. Abbiamo provato a capire perché."

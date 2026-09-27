@@ -3,7 +3,7 @@ title: "Il ritorno del vinile: perché i ragazzi riscoprono l'analogico"
 subtitle: "In un mondo di streaming illimitato, sempre più giovani tornano a comprare dischi in vinile. Un paradosso solo apparente"
 date: "2026-08-10"
 author: "Giulia Conti"
-category: "Cultura"
+category: "Storia"
 cover: "https://picsum.photos/seed/telesis-vinile/1600/1000"
 readingTime: 5
 excerpt: "Costoso, ingombrante, tutt'altro che pratico: eppure il vinile continua a conquistare nuovi ascoltatori, soprattutto tra i più giovani. Ecco perché."

@@ -3,7 +3,7 @@ title: "Elezioni studentesche: la partecipazione è in calo, ecco perché"
 subtitle: "Sempre meno studenti votano per i rappresentanti d'istituto. Abbiamo provato a capire le cause di questo disinteresse"
 date: "2026-07-30"
 author: "Lorenzo Ferri"
-category: "Attualità"
+category: "Geopolitica"
 cover: "https://picsum.photos/seed/telesis-elezioni/1600/1000"
 readingTime: 6
 excerpt: "I dati sull'affluenza alle elezioni dei rappresentanti d'istituto sono in calo costante da anni. Non è solo disinteresse: è sfiducia."
