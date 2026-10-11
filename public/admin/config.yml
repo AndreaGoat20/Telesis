@@ -35,7 +35,7 @@ collections:
       - label: "Categoria"
         name: "category"
         widget: "select"
-        options: ["Storia", "Geopolitica", "Economia"]
+        options: ["Geopolitica", "Politica", "Economia", "Società", "Storia", "Cultura"]
       - { label: "Immagine di copertina", name: "cover", widget: "image" }
       - {
           label: "Tempo di lettura (minuti)",

@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: "Tutti gli articoli pubblicati su Telesis Magazine.",
 };
 
-export default function ArchivioPage() {
+export default function ArchivioPage({
+  searchParams,
+}: {
+  searchParams: { categoria?: string };
+}) {
   const articles = getAllArticles();
 
   return (
@@ -30,7 +34,7 @@ export default function ArchivioPage() {
       </section>
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6">
-        <ArchivioExplorer articles={articles} />
+        <ArchivioExplorer articles={articles} initialCategory={searchParams.categoria} />
       </div>
     </div>
   );

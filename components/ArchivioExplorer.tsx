@@ -12,16 +12,24 @@ function getYear(dateString: string): string {
   return year || "Sconosciuto";
 }
 
-export default function ArchivioExplorer({ articles }: { articles: Article[] }) {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("Tutte");
-  const [year, setYear] = useState("Tutti");
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
+export default function ArchivioExplorer({
+  articles,
+  initialCategory,
+}: {
+  articles: Article[];
+  initialCategory?: string;
+}) {
   const categories = useMemo(
     () => ["Tutte", ...Array.from(new Set(articles.map((a) => a.category)))],
     [articles]
   );
+
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState(() =>
+    initialCategory && categories.includes(initialCategory) ? initialCategory : "Tutte"
+  );
+  const [year, setYear] = useState("Tutti");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const years = useMemo(
     () => ["Tutti", ...Array.from(new Set(articles.map((a) => getYear(a.date)))).sort().reverse()],

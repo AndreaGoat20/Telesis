@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 import CategoryPill from "./CategoryPill";
+import AuthorAvatar from "./AuthorAvatar";
 
 export default function ArticleCard({ article }: { article: Article }) {
   return (
@@ -23,7 +24,7 @@ export default function ArticleCard({ article }: { article: Article }) {
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <CategoryPill category={article.category} />
+        <CategoryPill category={article.category} variant="text" />
 
         <h3 className="font-display text-xl font-semibold leading-snug text-ink group-hover:text-primary">
           {article.title}
@@ -34,11 +35,10 @@ export default function ArticleCard({ article }: { article: Article }) {
         )}
 
         <div className="mt-auto flex items-center gap-2 pt-2 text-xs text-ink/50">
+          <AuthorAvatar name={article.author} />
           <span className="font-medium text-ink/70">{article.author}</span>
           <span aria-hidden>·</span>
           <time dateTime={article.date}>{formatDate(article.date)}</time>
-          <span aria-hidden>·</span>
-          <span>{article.readingTime} min</span>
         </div>
       </div>
     </Link>
