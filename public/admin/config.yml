@@ -2,8 +2,10 @@ backend:
   name: github
   repo: AndreaGoat20/Telesis
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  # TODO dopo il primo deploy su Vercel: sostituisci con il dominio reale
+  # del sito (es. https://telesis.vercel.app o il tuo dominio custom).
+  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  auth_endpoint: api/auth
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
