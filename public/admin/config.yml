@@ -2,9 +2,7 @@ backend:
   name: github
   repo: AndreaGoat20/Telesis
   branch: main
-  # TODO dopo il primo deploy su Vercel: sostituisci con il dominio reale
-  # del sito (es. https://telesis.vercel.app o il tuo dominio custom).
-  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  base_url: https://telesis-mu.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "public/images/uploads"
