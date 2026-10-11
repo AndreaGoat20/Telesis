@@ -1,0 +1,8 @@
+---
+title: prova
+date: 2026-10-11
+author: zick
+category: Storia
+cover: https://www.google.com/search?client=firefox-b-lm&hs=rHnq&sca_esv=5c572a97bbbbe8ac&sxsrf=APpeQnt9PW_9VOu2HBmrb_iYpAC8LTc3Rw:1791716315758&udm=2&fbs=ABfTbFWgwlc2MNw7uknLQP9cFo05vz_j0qO93sxQIjl2yWoArrJCFLziglDLaaG9JeE6XuUPEKLYMsmsvhQcOYpXwZbeBm06rKddwTqoqwa7GllydNii8f7m3hoxVR0swQJ3p6s9dUMeiN7ms0XR85JytgSJKt27WYWBQWfHVA23-DvIfLj5z2YJmBBITO4t0IS1sTI2If7o&q=elden+ring&sa=X&ved=2ahUKEwj-rKe057GXAxWO2AIHHfe-AK4QtKgLegQIFBAB&biw=1707&bih=837&dpr=1.5#sv=CAMSUxoyKhBlLVZvSjJpM1RKY2Uwa0xNMg5Wb0oyaTNUSmNlMGtMTToOMURxYkdQdU5CWHl3ME0gBCoXCgFzEhBlLVZvSjJpM1RKY2Uwa0xNGAEwAVACGAcgzoOg_wdKCBACGAEgAigB
+---
+gugugaga
