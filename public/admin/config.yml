@@ -2,7 +2,7 @@ backend:
   name: github
   repo: AndreaGoat20/Telesis
   branch: main
-  base_url: https://telesis-mu.vercel.app
+  base_url: https://magazine-telesis.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "public/images/uploads"
