@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Telesis Magazine",
   },
   description:
-    "Telesis Magazine: le versioni estese degli articoli che condividiamo su Instagram (@magazine.telesis). Attualità, cultura e società raccontate da studenti.",
+    "Telesis Magazine: le versioni estese degli articoli che condividiamo su Instagram (@telesis.magazine). Attualità, cultura e società raccontate da studenti.",
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 # Telesis Magazine
 
-Sito della rivista studentesca **Telesis Magazine** ([@magazine.telesis](https://www.instagram.com/magazine.telesis)).
+Sito della rivista studentesca **Telesis Magazine** ([@telesis.magazine](https://www.instagram.com/telesis.magazine?vrfl=MWJjN2tsOHlwdHR4eQ==)).
 
 Stack: **Next.js (App Router)** + **TypeScript** + **Tailwind CSS**. I contenuti sono file Markdown con frontmatter, letti a build/request time dal filesystem (nessun database o CMS esterno).
 
