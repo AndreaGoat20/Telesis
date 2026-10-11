@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Article } from "@/lib/types";
+import { CATEGORIES } from "@/lib/categories";
 import ArticleCard from "./ArticleCard";
 import Reveal from "./Reveal";
 
@@ -19,10 +20,15 @@ export default function ArchivioExplorer({
   articles: Article[];
   initialCategory?: string;
 }) {
-  const categories = useMemo(
-    () => ["Tutte", ...Array.from(new Set(articles.map((a) => a.category)))],
-    [articles]
-  );
+  // Le categorie disponibili nel filtro sono sempre quelle ufficiali
+  // (lib/categories.ts), non solo quelle già usate da un articolo:
+  // altrimenti una categoria ancora senza articoli (es. appena aggiunta
+  // nel CMS) non comparirebbe come opzione selezionabile.
+  const categories = useMemo(() => {
+    const known = new Set(CATEGORIES.map((c) => c.name));
+    const fromArticles = articles.map((a) => a.category).filter((c) => !known.has(c));
+    return ["Tutte", ...CATEGORIES.map((c) => c.name), ...Array.from(new Set(fromArticles))];
+  }, [articles]);
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(() =>
