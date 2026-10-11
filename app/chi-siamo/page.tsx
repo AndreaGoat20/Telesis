@@ -82,7 +82,7 @@ export default function ChiSiamoPage() {
                   <span aria-hidden>→</span>
                 </Link>
                 <a
-                  href="https://www.instagram.com/telesis.magazine?vrfl=MWJjN2tsOHlwdHR4eQ=="
+                  href="https://www.instagram.com/telesis.magazine"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-bone/30 px-6 py-3 text-sm font-semibold text-bone hover:border-secondary hover:text-secondary"

@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/telesis.magazine?vrfl=MWJjN2tsOHlwdHR4eQ=="
+                  href="https://www.instagram.com/telesis.magazine"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-bone/80 hover:text-secondary"

@@ -30,7 +30,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://www.instagram.com/telesis.magazine?vrfl=MWJjN2tsOHlwdHR4eQ=="
+            href="https://www.instagram.com/telesis.magazine"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full bg-bone px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-secondary sm:inline-block"
